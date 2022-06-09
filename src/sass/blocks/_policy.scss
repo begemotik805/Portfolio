@@ -1,0 +1,22 @@
+.policy {
+    padding: 40px 0 60px 0;
+    &__title {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    h3 {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .first-paragraph {
+        &::before {
+            content: "";
+            margin-right: 25px;
+        }
+    }
+    span {
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
