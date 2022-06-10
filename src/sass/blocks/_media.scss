@@ -17,7 +17,7 @@
 
         &__skills {
             column-gap: 20px;
-            grid-template: repeat(2, minmax(115px, auto))/repeat(2, 250px);
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 250px);
 
             &-item {
                 grid-template-columns: 40px 195px;
@@ -33,11 +33,11 @@
     }
 
     .promo {
-        background: url(../img/main_bg.jpg) no-repeat 53%/cover;
+        background: url("../img/main_bg.jpg") no-repeat 53% / cover;
     }
 
     .title {
-        &_fz36 {
+        &-fz36 {
             font-size: 30px;
             line-height: 42px;
             margin-top: 26px;
@@ -51,7 +51,8 @@
 
     .about {
         &__wrapper {
-            grid-template-columns: 300px 380px;
+            grid-template-columns: 320px 380px;
+            column-gap: 20px;
         }
 
         &__skills {
@@ -64,22 +65,37 @@
             }
         }
     }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
 
-    @media (max-width: 768px) {
-        .container {
-            max-width: 540px;
+    .title {
+        &-fz48 {
+            font-size: 28px;
         }
+    }
 
-        .title {
-            &-fz48 {
-                font-size: 28px;
-            }
+    .promo {
+        &__title {
+            line-height: 39px;
+            width: 300px;
         }
-
-        .promo {
-            &__title {
-                line-height: 39px;
-                width: 300px;
+    }
+    .about {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 400px auto auto / 1fr;
+        }
+        &__photo {
+            grid-row: unset;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
             }
         }
     }
@@ -95,6 +111,9 @@
         &-fz48 {
             font-size: 26px;
         }
+        &-fz36 {
+            font-size: 24px;
+        }
     }
 
     .hamburger {
@@ -109,10 +128,18 @@
     }
 
     .promo {
-        background: url('../img/main_bg.jpg') no-repeat 59%/cover;
+        background: url("../img/main_bg.jpg") no-repeat 57% / cover;
 
         &__btns {
             margin-top: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
         }
     }
 }
